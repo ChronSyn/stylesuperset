@@ -12,13 +12,18 @@ type StyledTextProps = {
 const StyledText: React.FC<StyledTextProps> = ({ children, fontSize, style, ...props }) => {
 
   const getFontSize = () => {
-    if (typeof fontSize === 'string' && fontSize.startsWith('$')) {
-      const sizeKey = fontSize.replace('$', '') as keyof typeof fontSizeStyles;
-      return fontSizeStyles[sizeKey];
+    const fontSizeAsString = fontSize?.toString();
+    const fontSizeAsNumber = Number(fontSizeAsString);
+
+    if (fontSizeAsString?.startsWith('$')) {
+      const out = fontSizeStyles[fontSizeAsString.replace('$', '') as keyof typeof fontSizeStyles];
+      console.log(`1 - using ${fontSizeAsString} as ${out}`)
+      return out;
     }
 
-    if (typeof fontSize === 'number') {
-      return { fontSize };
+    if (!isNaN(fontSizeAsNumber)) {
+      console.log(`2 - using ${fontSizeAsNumber} as ${fontSizeAsNumber}`)
+      return { fontSize: fontSizeAsNumber };
     }
 
     return {};

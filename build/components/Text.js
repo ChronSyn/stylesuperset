@@ -9,12 +9,16 @@ const react_native_1 = require("react-native");
 const font_1 = __importDefault(require("../styles/font")); // Adjust the import path as necessary
 const StyledText = ({ children, fontSize, style, ...props }) => {
     const getFontSize = () => {
-        if (typeof fontSize === 'string' && fontSize.startsWith('$')) {
-            const sizeKey = fontSize.replace('$', '');
-            return font_1.default[sizeKey];
+        const fontSizeAsString = fontSize === null || fontSize === void 0 ? void 0 : fontSize.toString();
+        const fontSizeAsNumber = Number(fontSizeAsString);
+        if (fontSizeAsString === null || fontSizeAsString === void 0 ? void 0 : fontSizeAsString.startsWith('$')) {
+            const out = font_1.default[fontSizeAsString.replace('$', '')];
+            console.log(`1 - using ${fontSizeAsString} as ${out}`);
+            return out;
         }
-        if (typeof fontSize === 'number') {
-            return { fontSize };
+        if (!isNaN(fontSizeAsNumber)) {
+            console.log(`2 - using ${fontSizeAsNumber} as ${fontSizeAsNumber}`);
+            return { fontSize: fontSizeAsNumber };
         }
         return {};
     };
