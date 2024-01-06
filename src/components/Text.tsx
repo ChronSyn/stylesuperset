@@ -11,19 +11,33 @@ type StyledTextProps = {
 };
 
 const StyledText: React.FC<StyledTextProps> = ({ children, fontSize, style, ...props }) => {
-  // Resolve fontSize style
-  let fontSizeStyle = {};
-  if (fontSize) {
-    const sizeKey = typeof fontSize === 'string' && fontSize.startsWith('$')
-      ? fontSize.substring(1)
-      : fontSize.toString(); // Use toString for numeric values
 
-    fontSizeStyle = fontSizeStyles[sizeKey as keyof TBaseSizes] || {};
+  const getFontSize = () => {
+    if (typeof fontSize === 'string' && fontSize.startsWith('$')) {
+      const sizeKey = fontSize.substring(1);
+      return fontSizeStyles[sizeKey as keyof TBaseSizes];
+    }
+
+    if (typeof fontSize === 'number') {
+      return { fontSize };
+    }
+
+    return {};
   }
 
-  const combinedStyles = [fontSizeStyle, style];
+  // Resolve fontSize style
+  // let fontSizeStyle = {};
+  // if (fontSize) {
+  //   const sizeKey = typeof fontSize === 'string' && fontSize.startsWith('$')
+  //     ? fontSize.substring(1)
+  //     : fontSize.toString(); // Use toString for numeric values
 
-  return <Text style={combinedStyles} {...props}>{children}</Text>;
+  //   fontSizeStyle = fontSizeStyles[sizeKey as keyof TBaseSizes] || {};
+  // }
+
+  // const combinedStyles = [style, fontSizeStyle];
+
+  return <Text style={[style, getFontSize()]} {...props}>{children}</Text>;
 };
 
 export default StyledText;
