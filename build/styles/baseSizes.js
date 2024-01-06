@@ -36,13 +36,13 @@ const CreateSizeStyles = ({ baseSize, minSize, maxSize }) => {
     const xlSizeKey = sizeKeys[sizeKeys.length - 1];
     const xlSize = internal__baseSizes[xlSizeKey];
     // Calculate middle, sm, and lg sizes
-    const middleIndex = Math.floor(sizeKeys.length / 2);
+    const middleIndex = parseFloat((sizeKeys.length * 0.5).toFixed(10));
     const mdSizeKey = sizeKeys[middleIndex];
     const mdSize = internal__baseSizes[mdSizeKey];
-    const smIndex = Math.floor(middleIndex / 2);
+    const smIndex = parseFloat((sizeKeys.length * 0.25).toFixed(10));
     const smSizeKey = sizeKeys[smIndex];
     const smSize = internal__baseSizes[smSizeKey];
-    const lgIndex = Math.floor((middleIndex + sizeKeys.length) / 2);
+    const lgIndex = parseFloat((sizeKeys.length * 0.75).toFixed(10)); // ((middleIndex + sizeKeys.length) / 2);
     const lgSizeKey = sizeKeys[lgIndex];
     const lgSize = internal__baseSizes[lgSizeKey];
     const baseSizes = {

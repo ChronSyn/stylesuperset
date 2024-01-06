@@ -1,4 +1,3 @@
-import { StyleSheet } from 'react-native';
 import { baseSizes, TBaseSizes } from './baseSizes';
 
 // Define a type for the font size styles
