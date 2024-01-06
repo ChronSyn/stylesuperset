@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "jsx": "react-native"
+  },
+  "include": ["./**/*.ts", "./**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "package.json",
+    "tsconfig.json",
+    "package-lock.json",
+    "eslintrc.json",
+    ".prettierrc",
+    "test/**/*.*"
+  ]
+}
