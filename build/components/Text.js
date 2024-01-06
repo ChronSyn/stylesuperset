@@ -10,7 +10,7 @@ const font_1 = __importDefault(require("../styles/font")); // Adjust the import 
 const StyledText = ({ children, fontSize, style, ...props }) => {
     const getFontSize = () => {
         if (typeof fontSize === 'string' && fontSize.startsWith('$')) {
-            const sizeKey = fontSize.substring(1);
+            const sizeKey = fontSize.replace('$', '');
             return font_1.default[sizeKey];
         }
         if (typeof fontSize === 'number') {
@@ -18,15 +18,6 @@ const StyledText = ({ children, fontSize, style, ...props }) => {
         }
         return {};
     };
-    // Resolve fontSize style
-    // let fontSizeStyle = {};
-    // if (fontSize) {
-    //   const sizeKey = typeof fontSize === 'string' && fontSize.startsWith('$')
-    //     ? fontSize.substring(1)
-    //     : fontSize.toString(); // Use toString for numeric values
-    //   fontSizeStyle = fontSizeStyles[sizeKey as keyof TBaseSizes] || {};
-    // }
-    // const combinedStyles = [style, fontSizeStyle];
     return <react_native_1.Text style={[style, getFontSize()]} {...props}>{children}</react_native_1.Text>;
 };
 exports.default = StyledText;

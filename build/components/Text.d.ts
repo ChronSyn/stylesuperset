@@ -1,9 +1,9 @@
 import React from 'react';
 import { TextStyle, StyleProp } from 'react-native';
-import { TBaseSizes } from '../styles/baseSizes';
+import fontSizeStyles from '../styles/font';
 type StyledTextProps = {
     children?: React.ReactNode;
-    fontSize?: keyof TBaseSizes | string;
+    fontSize?: keyof typeof fontSizeStyles | string;
     style?: StyleProp<TextStyle>;
 };
 declare const StyledText: React.FC<StyledTextProps>;
