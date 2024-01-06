@@ -14,15 +14,13 @@ const gap_1 = __importDefault(require("../styles/gap"));
 const resolveStyle = (stylesObj, propValue, propType) => {
     const sizeKey = (propValue !== null && propValue !== void 0 ? propValue : '').toString().startsWith('$') ? (propValue !== null && propValue !== void 0 ? propValue : '').toString().substring(1) : propValue;
     const resolvedStyle = stylesObj[sizeKey] || {};
-    if (propType === 'px' || propType === 'mx') {
-        return { paddingLeft: resolvedStyle, paddingRight: resolvedStyle };
-    }
-    else if (propType === 'py' || propType === 'my') {
-        return { paddingTop: resolvedStyle, paddingBottom: resolvedStyle };
-    }
-    else {
-        return resolvedStyle;
-    }
+    // if (propType === 'px' || propType === 'mx') {
+    //   return { paddingLeft: resolvedStyle, paddingRight: resolvedStyle };
+    // } else if (propType === 'py' || propType === 'my') {
+    //   return { paddingTop: resolvedStyle, paddingBottom: resolvedStyle };
+    // } else {
+    return resolvedStyle;
+    // }
 };
 const StyledView = ({ children, style, ...props }) => {
     const resolvedStyles = Object.keys(props).map((propName) => {

@@ -33,13 +33,13 @@ const resolveStyle = (stylesObj: any, propValue: keyof TBaseSizes | string, prop
   const sizeKey = (propValue ?? '').toString().startsWith('$') ? (propValue ?? '').toString().substring(1) as keyof TBaseSizes : propValue;
   const resolvedStyle = stylesObj[sizeKey] || {};
 
-  if (propType === 'px' || propType === 'mx') {
-    return { paddingLeft: resolvedStyle, paddingRight: resolvedStyle };
-  } else if (propType === 'py' || propType === 'my') {
-    return { paddingTop: resolvedStyle, paddingBottom: resolvedStyle };
-  } else {
-    return resolvedStyle;
-  }
+  // if (propType === 'px' || propType === 'mx') {
+  //   return { paddingLeft: resolvedStyle, paddingRight: resolvedStyle };
+  // } else if (propType === 'py' || propType === 'my') {
+  //   return { paddingTop: resolvedStyle, paddingBottom: resolvedStyle };
+  // } else {
+  return resolvedStyle;
+  // }
 };
 
 const StyledView: React.FC<StyledViewProps> = ({ children, style, ...props }) => {
