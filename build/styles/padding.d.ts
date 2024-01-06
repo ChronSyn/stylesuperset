@@ -1,5 +1,5 @@
 import { TBaseSizes } from './baseSizes';
-type PaddingDirection = 't' | 'b' | 'l' | 'r' | 'x' | 'y' | 'all';
+type PaddingDirection = 'pt' | 'pb' | 'pl' | 'pr' | 'px' | 'py' | 'p';
 type NestedPaddingStyles = {
     [key in PaddingDirection]: {
         [size in keyof TBaseSizes]: any;

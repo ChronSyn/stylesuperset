@@ -1,8 +1,7 @@
-import { StyleSheet } from 'react-native';
 import { baseSizes, TBaseSizes } from './baseSizes';
 
 // Define a type for the nested padding styles
-type PaddingDirection = 't' | 'b' | 'l' | 'r' | 'x' | 'y' | 'all';
+type PaddingDirection = 'pt' | 'pb' | 'pl' | 'pr' | 'px' | 'py' | 'p';
 type NestedPaddingStyles = {
   [key in PaddingDirection]: {
     [size in keyof TBaseSizes]: any;
@@ -20,13 +19,13 @@ const initializeDirection = () => {
 
 // Create the nested stylesheet dynamically
 const paddingStyles: NestedPaddingStyles = {
-  t: initializeDirection(),
-  b: initializeDirection(),
-  l: initializeDirection(),
-  r: initializeDirection(),
-  x: initializeDirection(),
-  y: initializeDirection(),
-  all: initializeDirection(),
+  pt: initializeDirection(),
+  pb: initializeDirection(),
+  pl: initializeDirection(),
+  pr: initializeDirection(),
+  px: initializeDirection(),
+  py: initializeDirection(),
+  p: initializeDirection(),
 };
 
 // Populate each direction with specific styles
@@ -34,17 +33,17 @@ Object.keys(baseSizes).forEach(sizeKey => {
   const size = sizeKey as keyof TBaseSizes;
 
   // Top, Bottom, Left, Right
-  paddingStyles.t[size] = { paddingTop: baseSizes[size] };
-  paddingStyles.b[size] = { paddingBottom: baseSizes[size] };
-  paddingStyles.l[size] = { paddingLeft: baseSizes[size] };
-  paddingStyles.r[size] = { paddingRight: baseSizes[size] };
+  paddingStyles.pt[size] = { paddingTop: baseSizes[size] };
+  paddingStyles.pb[size] = { paddingBottom: baseSizes[size] };
+  paddingStyles.pl[size] = { paddingLeft: baseSizes[size] };
+  paddingStyles.pr[size] = { paddingRight: baseSizes[size] };
 
   // Horizontal and Vertical
-  paddingStyles.x[size] = { paddingLeft: baseSizes[size], paddingRight: baseSizes[size] };
-  paddingStyles.y[size] = { paddingTop: baseSizes[size], paddingBottom: baseSizes[size] };
+  paddingStyles.px[size] = { paddingLeft: baseSizes[size], paddingRight: baseSizes[size] };
+  paddingStyles.py[size] = { paddingTop: baseSizes[size], paddingBottom: baseSizes[size] };
 
   // All sides
-  paddingStyles.all[size] = { padding: baseSizes[size] };
+  paddingStyles.p[size] = { padding: baseSizes[size] };
 });
 
 export default paddingStyles;

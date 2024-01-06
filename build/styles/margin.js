@@ -11,26 +11,26 @@ const initializeDirection = () => {
 };
 // Create the nested stylesheet dynamically
 const marginStyles = {
-    t: initializeDirection(),
-    b: initializeDirection(),
-    l: initializeDirection(),
-    r: initializeDirection(),
-    x: initializeDirection(),
-    y: initializeDirection(),
-    all: initializeDirection(),
+    mt: initializeDirection(),
+    mb: initializeDirection(),
+    ml: initializeDirection(),
+    mr: initializeDirection(),
+    mx: initializeDirection(),
+    my: initializeDirection(),
+    m: initializeDirection(),
 };
 // Populate each direction with specific styles
 Object.keys(baseSizes_1.baseSizes).forEach(sizeKey => {
     const size = sizeKey;
     // Top, Bottom, Left, Right
-    marginStyles.t[size] = { marginTop: baseSizes_1.baseSizes[size] };
-    marginStyles.b[size] = { marginBottom: baseSizes_1.baseSizes[size] };
-    marginStyles.l[size] = { marginLeft: baseSizes_1.baseSizes[size] };
-    marginStyles.r[size] = { marginRight: baseSizes_1.baseSizes[size] };
+    marginStyles.mt[size] = { marginTop: baseSizes_1.baseSizes[size] };
+    marginStyles.mb[size] = { marginBottom: baseSizes_1.baseSizes[size] };
+    marginStyles.ml[size] = { marginLeft: baseSizes_1.baseSizes[size] };
+    marginStyles.mr[size] = { marginRight: baseSizes_1.baseSizes[size] };
     // Horizontal and Vertical
-    marginStyles.x[size] = { marginLeft: baseSizes_1.baseSizes[size], marginRight: baseSizes_1.baseSizes[size] };
-    marginStyles.y[size] = { marginTop: baseSizes_1.baseSizes[size], marginBottom: baseSizes_1.baseSizes[size] };
+    marginStyles.mx[size] = { marginLeft: baseSizes_1.baseSizes[size], marginRight: baseSizes_1.baseSizes[size] };
+    marginStyles.my[size] = { marginTop: baseSizes_1.baseSizes[size], marginBottom: baseSizes_1.baseSizes[size] };
     // All sides
-    marginStyles.all[size] = { margin: baseSizes_1.baseSizes[size] };
+    marginStyles.m[size] = { margin: baseSizes_1.baseSizes[size] };
 });
 exports.default = marginStyles;

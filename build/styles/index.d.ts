@@ -20,7 +20,7 @@ export declare const styles: {
         };
     };
     margin: {
-        t: {
+        mt: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -28,7 +28,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        b: {
+        mb: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -36,7 +36,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        l: {
+        ml: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -44,7 +44,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        r: {
+        mr: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -52,7 +52,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        x: {
+        mx: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -60,7 +60,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        y: {
+        my: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -68,7 +68,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        all: {
+        m: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -78,7 +78,7 @@ export declare const styles: {
         };
     };
     padding: {
-        t: {
+        pt: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -86,7 +86,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        b: {
+        pb: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -94,7 +94,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        l: {
+        pl: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -102,7 +102,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        r: {
+        pr: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -110,7 +110,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        x: {
+        px: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -118,7 +118,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        y: {
+        py: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -126,7 +126,7 @@ export declare const styles: {
             lg: any;
             xl: any;
         };
-        all: {
+        p: {
             [x: number]: any;
             xs: any;
             sm: any;
@@ -157,43 +157,263 @@ export declare const styles: {
     };
     border: {
         radius: {
-            [x: number]: {
-                borderRadius: number;
+            br: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            xs: {
-                borderRadius: number;
+            btlr: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            sm: {
-                borderRadius: number;
+            borderTopLeftRadius: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            md: {
-                borderRadius: number;
+            bblr: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            lg: {
-                borderRadius: number;
+            borderBottomLeftRadius: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            xl: {
-                borderRadius: number;
+            btrr: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderTopRightRadius: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            bbrr: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderBottomRightRadius: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            blr: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderLeftRadius: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            brr: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderRightRadius: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            btr: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderTopRadius: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            bbr: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderBottomRadius: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderRadius: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
         };
         width: {
-            [x: number]: {
-                borderWidth: number;
+            bt: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            xs: {
-                borderWidth: number;
+            borderTopWidth: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            sm: {
-                borderWidth: number;
+            bb: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            md: {
-                borderWidth: number;
+            borderBottomWidth: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            lg: {
-                borderWidth: number;
+            bl: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
-            xl: {
-                borderWidth: number;
+            borderLeftWidth: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            br: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderRightWidth: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            bx: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderXWidth: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            by: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderYWidth: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            b: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
+            };
+            borderWidth: {
+                [x: number]: any;
+                xs: any;
+                sm: any;
+                md: any;
+                lg: any;
+                xl: any;
             };
         };
     };
