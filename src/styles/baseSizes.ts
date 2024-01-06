@@ -40,7 +40,7 @@ export const baseSizes: TBaseSizes = {
   sm: internal__baseSizes[5],
   md: internal__baseSizes[10],
   lg: internal__baseSizes[15],
-  xl: internal__baseSizes[20]
+  xl: internal__baseSizes[sizeKeys.length - 1]
 };
 
 export interface ICreateSizeStylesArgs {
@@ -64,15 +64,15 @@ export const CreateSizeStyles = ({ baseSize, minSize, maxSize }: ICreateSizeStyl
   const xlSize = internal__baseSizes[xlSizeKey];
 
   // Calculate middle, sm, and lg sizes
-  const middleIndex = parseFloat((sizeKeys.length * 0.5).toFixed(10));
+  const middleIndex = Math.floor(parseFloat((sizeKeys.length / 2).toFixed(10)));
   const mdSizeKey = sizeKeys[middleIndex];
   const mdSize = internal__baseSizes[mdSizeKey];
 
-  const smIndex = parseFloat((sizeKeys.length * 0.25).toFixed(10));
+  const smIndex = Math.round(sizeKeys.length * 0.25);
   const smSizeKey = sizeKeys[smIndex];
   const smSize = internal__baseSizes[smSizeKey];
 
-  const lgIndex = parseFloat((sizeKeys.length * 0.75).toFixed(10)); // ((middleIndex + sizeKeys.length) / 2);
+  const lgIndex = Math.round((middleIndex + sizeKeys.length-1) / 2);
   const lgSizeKey = sizeKeys[lgIndex];
   const lgSize = internal__baseSizes[lgSizeKey];
 
