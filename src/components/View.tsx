@@ -44,7 +44,7 @@ const resolveStyle = (stylesObj: any, propValue: keyof TBaseSizes | string, prop
 
 const StyledView: React.FC<StyledViewProps> = ({ children, style, ...props }) => {
   const resolvedStyles = Object.keys(props).map((propName) => {
-    const propValue = props[propName as keyof StyledViewProps as number] as keyof TBaseSizes | string;
+    const propValue = props[propName as keyof StyledViewProps] as keyof TBaseSizes | string;
     if (typeof propValue === 'string') {
       switch (propName) {
         case 'pt':

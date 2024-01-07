@@ -1,6 +1,6 @@
 export declare const styles: {
     gap: {
-        [x: number]: {
+        [x: string]: {
             gap: number;
         };
         xs: {
@@ -21,7 +21,7 @@ export declare const styles: {
     };
     margin: {
         mt: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -29,7 +29,7 @@ export declare const styles: {
             xl: any;
         };
         mb: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -37,7 +37,7 @@ export declare const styles: {
             xl: any;
         };
         ml: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -45,7 +45,7 @@ export declare const styles: {
             xl: any;
         };
         mr: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -53,7 +53,7 @@ export declare const styles: {
             xl: any;
         };
         mx: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -61,7 +61,7 @@ export declare const styles: {
             xl: any;
         };
         my: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -69,7 +69,7 @@ export declare const styles: {
             xl: any;
         };
         m: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -79,7 +79,7 @@ export declare const styles: {
     };
     padding: {
         pt: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -87,7 +87,7 @@ export declare const styles: {
             xl: any;
         };
         pb: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -95,7 +95,7 @@ export declare const styles: {
             xl: any;
         };
         pl: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -103,7 +103,7 @@ export declare const styles: {
             xl: any;
         };
         pr: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -111,7 +111,7 @@ export declare const styles: {
             xl: any;
         };
         px: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -119,7 +119,7 @@ export declare const styles: {
             xl: any;
         };
         py: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -127,7 +127,7 @@ export declare const styles: {
             xl: any;
         };
         p: {
-            [x: number]: any;
+            [x: string]: any;
             xs: any;
             sm: any;
             md: any;
@@ -136,7 +136,7 @@ export declare const styles: {
         };
     };
     font: {
-        [x: number]: {
+        [x: string]: {
             fontSize: number;
         };
         xs: {
@@ -158,7 +158,7 @@ export declare const styles: {
     border: {
         radius: {
             br: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -166,7 +166,7 @@ export declare const styles: {
                 xl: any;
             };
             btlr: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -174,7 +174,7 @@ export declare const styles: {
                 xl: any;
             };
             borderTopLeftRadius: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -182,7 +182,7 @@ export declare const styles: {
                 xl: any;
             };
             bblr: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -190,7 +190,7 @@ export declare const styles: {
                 xl: any;
             };
             borderBottomLeftRadius: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -198,7 +198,7 @@ export declare const styles: {
                 xl: any;
             };
             btrr: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -206,7 +206,7 @@ export declare const styles: {
                 xl: any;
             };
             borderTopRightRadius: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -214,7 +214,7 @@ export declare const styles: {
                 xl: any;
             };
             bbrr: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -222,7 +222,7 @@ export declare const styles: {
                 xl: any;
             };
             borderBottomRightRadius: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -230,7 +230,7 @@ export declare const styles: {
                 xl: any;
             };
             blr: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -238,7 +238,7 @@ export declare const styles: {
                 xl: any;
             };
             borderLeftRadius: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -246,7 +246,7 @@ export declare const styles: {
                 xl: any;
             };
             brr: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -254,7 +254,7 @@ export declare const styles: {
                 xl: any;
             };
             borderRightRadius: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -262,7 +262,7 @@ export declare const styles: {
                 xl: any;
             };
             btr: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -270,7 +270,7 @@ export declare const styles: {
                 xl: any;
             };
             borderTopRadius: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -278,7 +278,7 @@ export declare const styles: {
                 xl: any;
             };
             bbr: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -286,7 +286,7 @@ export declare const styles: {
                 xl: any;
             };
             borderBottomRadius: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -294,7 +294,7 @@ export declare const styles: {
                 xl: any;
             };
             borderRadius: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -304,7 +304,7 @@ export declare const styles: {
         };
         width: {
             bt: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -312,7 +312,7 @@ export declare const styles: {
                 xl: any;
             };
             borderTopWidth: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -320,7 +320,7 @@ export declare const styles: {
                 xl: any;
             };
             bb: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -328,7 +328,7 @@ export declare const styles: {
                 xl: any;
             };
             borderBottomWidth: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -336,7 +336,7 @@ export declare const styles: {
                 xl: any;
             };
             bl: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -344,7 +344,7 @@ export declare const styles: {
                 xl: any;
             };
             borderLeftWidth: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -352,7 +352,7 @@ export declare const styles: {
                 xl: any;
             };
             br: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -360,7 +360,7 @@ export declare const styles: {
                 xl: any;
             };
             borderRightWidth: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -368,7 +368,7 @@ export declare const styles: {
                 xl: any;
             };
             bx: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -376,7 +376,7 @@ export declare const styles: {
                 xl: any;
             };
             borderXWidth: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -384,7 +384,7 @@ export declare const styles: {
                 xl: any;
             };
             by: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -392,7 +392,7 @@ export declare const styles: {
                 xl: any;
             };
             borderYWidth: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -400,7 +400,7 @@ export declare const styles: {
                 xl: any;
             };
             b: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -408,7 +408,7 @@ export declare const styles: {
                 xl: any;
             };
             borderWidth: {
-                [x: number]: any;
+                [x: string]: any;
                 xs: any;
                 sm: any;
                 md: any;
@@ -419,6 +419,6 @@ export declare const styles: {
     };
 };
 export declare const functions: {
-    CreateSizeStyles: ({ baseSize, minSize, maxSize }: import("./baseSizes").ICreateSizeStylesArgs) => import("./baseSizes").ExplicitSizes & Record<number, number>;
+    CreateSizeStyles: ({ baseSize, minSize, maxSize }: import("./baseSizes").ICreateSizeStylesArgs) => import("./baseSizes").TBaseSizes;
     baseSizes: import("./baseSizes").TBaseSizes;
 };

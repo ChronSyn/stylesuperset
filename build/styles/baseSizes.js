@@ -8,31 +8,33 @@ const GLOBAL_MAX_SIZE = 20;
 function generateSizeKeys(min, max, step) {
     const keys = [];
     for (let size = min; size <= max; size += step) {
-        keys.push(size);
+        keys.push(`$${size}`); // Prefixing with '$'
     }
     return keys;
 }
 // Generate all size keys
 const sizeKeys = generateSizeKeys(GLOBAL_MIN_SIZE, GLOBAL_MAX_SIZE, GLOBAL_BASE_SIZE);
-const internal__baseSizes = sizeKeys.reduce((acc, size) => {
-    acc[size] = size;
+const internal__baseSizes = sizeKeys.reduce((acc, sizeKey) => {
+    const size = parseFloat(sizeKey.substring(1)); // Removing '$' prefix and converting to number
+    acc[sizeKey] = size;
     return acc;
 }, {});
 exports.baseSizes = {
     ...internal__baseSizes,
-    xs: internal__baseSizes[1],
-    sm: internal__baseSizes[5],
-    md: internal__baseSizes[10],
-    lg: internal__baseSizes[15],
-    xl: internal__baseSizes[sizeKeys.length - 1]
+    xs: internal__baseSizes['$1'],
+    sm: internal__baseSizes['$5'],
+    md: internal__baseSizes['$10'],
+    lg: internal__baseSizes['$15'],
+    xl: internal__baseSizes[sizeKeys[sizeKeys.length - 1]]
 };
 const CreateSizeStyles = ({ baseSize, minSize, maxSize }) => {
     const sizeKeys = generateSizeKeys(minSize, maxSize, baseSize);
-    const internal__baseSizes = sizeKeys.reduce((acc, size) => {
-        acc[size] = size;
+    const internal__baseSizes = sizeKeys.reduce((acc, sizeKey) => {
+        const size = parseFloat(sizeKey.substring(1)); // Removing '$' prefix and converting to number
+        acc[sizeKey] = size;
         return acc;
     }, {});
-    const xsSize = internal__baseSizes[1];
+    const xsSize = internal__baseSizes['$1'];
     const xlSizeKey = sizeKeys[sizeKeys.length - 1];
     const xlSize = internal__baseSizes[xlSizeKey];
     // Calculate middle, sm, and lg sizes

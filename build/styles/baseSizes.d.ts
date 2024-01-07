@@ -5,7 +5,7 @@ export interface ExplicitSizes {
     lg: number;
     xl: number;
 }
-declare const sizeKeys: number[];
+declare const sizeKeys: string[];
 type NumericSizes = typeof sizeKeys[number];
 export type TBaseSizes = ExplicitSizes & Record<NumericSizes, number>;
 export declare const baseSizes: TBaseSizes;
@@ -14,5 +14,5 @@ export interface ICreateSizeStylesArgs {
     minSize: number;
     maxSize: number;
 }
-export declare const CreateSizeStyles: ({ baseSize, minSize, maxSize }: ICreateSizeStylesArgs) => ExplicitSizes & Record<number, number>;
+export declare const CreateSizeStyles: ({ baseSize, minSize, maxSize }: ICreateSizeStylesArgs) => TBaseSizes;
 export {};
