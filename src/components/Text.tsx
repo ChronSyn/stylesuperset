@@ -14,9 +14,10 @@ const StyledText: React.FC<StyledTextProps> = ({ children, fontSize, style, ...p
   const getFontSize = () => {
     const fontSizeAsString = fontSize?.toString();
     const fontSizeAsNumber = Number(fontSizeAsString);
+    const taggedFontSize = (fontSize?.toString() ?? '').replace('$', '');
 
-    if (fontSizeAsString?.startsWith('$')) {
-      const out = fontSizeStyles[fontSizeAsString.replace('$', '') as keyof typeof fontSizeStyles];
+    if ((fontSize ?? '').toString().startsWith('$')) {
+      const out = fontSizeStyles[taggedFontSize as keyof typeof fontSizeStyles];
       console.log(`1 - using ${fontSizeAsString} as ${out}`)
       return out;
     }
