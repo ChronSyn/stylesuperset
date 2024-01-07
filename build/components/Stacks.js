@@ -4,23 +4,25 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.YStack = exports.XStack = void 0;
-// components/XStack.tsx
+// components/Stacks.tsx
 const react_1 = __importDefault(require("react"));
 const react_native_1 = require("react-native");
-const View_1 = __importDefault(require("./View")); // Adjust the import path as necessary
-const XStack = ({ style, ...props }) => {
+const View_1 = __importDefault(require("./View"));
+const XStack = ({ children, style, ...rest }) => {
     const combinedStyles = react_native_1.StyleSheet.flatten([
-        { flexDirection: 'row' }, // as const asserts flexDirection is a literal type
+        { flexDirection: 'row' },
         style,
     ]);
-    return <View_1.default style={combinedStyles} {...props}/>;
+    //@ts-ignore
+    return <View_1.default style={[combinedStyles, { flexDirection: 'row' }]} {...rest}>{children}</View_1.default>;
 };
 exports.XStack = XStack;
-const YStack = ({ style, ...props }) => {
+const YStack = ({ children, style, ...styleProps }) => {
     const combinedStyles = react_native_1.StyleSheet.flatten([
-        { flexDirection: 'column' }, // as const asserts flexDirection is a literal type
+        { flexDirection: 'column' },
         style,
     ]);
-    return <View_1.default style={combinedStyles} {...props}/>;
+    //@ts-ignore
+    return <View_1.default style={combinedStyles} {...styleProps}>{children}</View_1.default>;
 };
 exports.YStack = YStack;

@@ -1,24 +1,28 @@
-// components/XStack.tsx
+// components/Stacks.tsx
 import React from 'react';
 import { StyleSheet, ViewStyle } from 'react-native';
-import StyledView from './View'; // Adjust the import path as necessary
+import StyledView from './View';
 
-type StackProps = React.ComponentProps<typeof StyledView>;
-
-export const XStack: React.FC<StackProps> = ({ style, ...props }) => {
-  const combinedStyles: ViewStyle = StyleSheet.flatten([
-    { flexDirection: 'row' as const }, // as const asserts flexDirection is a literal type
-    style,
-  ]);
-
-  return <StyledView style={combinedStyles} {...props} />;
+type StackProps = React.ComponentProps<typeof StyledView> & {
+  children?: React.ReactNode;
 };
 
-export const YStack: React.FC<StackProps> = ({ style, ...props }) => {
+export const XStack: React.FC<StackProps> = ({ children, style, ...rest }) => {
   const combinedStyles: ViewStyle = StyleSheet.flatten([
-    { flexDirection: 'column' as const }, // as const asserts flexDirection is a literal type
+    { flexDirection: 'row' as const },
     style,
   ]);
 
-  return <StyledView style={combinedStyles} {...props} />;
+  //@ts-ignore
+  return <StyledView style={[combinedStyles, { flexDirection: 'row' }]} {...rest}>{children}</StyledView>;
+};
+
+export const YStack: React.FC<StackProps> = ({ children, style, ...styleProps }) => {
+  const combinedStyles: ViewStyle = StyleSheet.flatten([
+    { flexDirection: 'column' as const },
+    style,
+  ]);
+
+  //@ts-ignore
+  return <StyledView style={combinedStyles} {...styleProps}>{children as React.ReactNode}</StyledView>;
 };

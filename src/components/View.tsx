@@ -8,8 +8,10 @@ import borderRadiusStyles from '../styles/border.radius';
 import gapStyles from '../styles/gap';
 import { TBaseSizes } from '../styles/baseSizes';
 
+type ReactProps = 'children' | 'key' | 'ref';
+
 type ShorthandStyleProps = {
-  [Property in keyof typeof paddingStyles | keyof typeof marginStyles | keyof typeof borderWidthStyles | keyof typeof borderRadiusStyles | keyof typeof gapStyles]?: keyof TBaseSizes | string;
+  [Property in keyof typeof paddingStyles | keyof typeof marginStyles | keyof typeof borderWidthStyles | keyof typeof borderRadiusStyles | keyof typeof gapStyles as Exclude<Property, ReactProps>]?: keyof TBaseSizes | string;
 };
 
 type LongFormStyleProps = {

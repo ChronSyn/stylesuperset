@@ -14,6 +14,8 @@ declare const _default: {
     } & {
         children?: import("react").ReactNode;
         style?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    } & {
+        children?: import("react").ReactNode;
     }>;
     YStack: import("react").FC<{
         [x: string]: string | undefined;
@@ -29,10 +31,12 @@ declare const _default: {
     } & {
         children?: import("react").ReactNode;
         style?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    } & {
+        children?: import("react").ReactNode;
     }>;
     Text: import("react").FC<{
         children?: import("react").ReactNode;
-        fontSize?: string | undefined;
+        fontSize?: string | number | undefined;
         style?: import("react-native").StyleProp<import("react-native").TextStyle>;
     }>;
     View: import("react").FC<{
